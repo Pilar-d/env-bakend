@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Inicio | Panel del Proyecto{% endblock %}
+
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h1 class="fw-bold">Panel de Acceso Rápido</h1>
+    </div>
+
+    <div class="row g-4">
+      <!-- Tarjeta API -->
+      <div class="col-12 col-md-6">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">API</h5>
+            <p class="card-text">
+              Accede al <em>Browsable API</em> si estás usando Django REST Framework. 
+              Desde ahí puedes explorar endpoints y probar requests.
+            </p>
+            <a href="/api/" class="btn btn-primary">Abrir API</a>
+            <!-- Si usas Swagger/Redoc, deja atajos opcionales: -->
+            <!-- <a href="/api/schema/swagger-ui/" class="btn btn-outline-secondary ms-2">Swagger UI</a>
+            <a href="/api/schema/redoc/" class="btn btn-outline-secondary ms-2">Redoc</a> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta Admin -->
+      <div class="col-12 col-md-6">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">Admin</h5>
+            <p class="card-text">
+              Entra al panel de administración de Django para gestionar usuarios, modelos y datos.
+              Requiere iniciar sesión con una cuenta de <code>superuser</code>.
+            </p>
+            <a href="/admin/" class="btn btn-dark">Abrir Admin</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Accesos rápidos -->
+    <div class="text-center mt-5">
+      <a href="/api/" class="btn btn-outline-primary btn-lg me-2">Ir a API</a>
+      <a href="/admin/" class="btn btn-outline-dark btn-lg">Ir a Admin</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
